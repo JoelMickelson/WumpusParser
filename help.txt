@@ -7,11 +7,11 @@ Commands -
 look: shows information about the current room (as when entering it)
 climb, exit, leave: use the stairs to leave the dungeon and end the game
 take, grab, get: obtain the gold treasure
-shoot (north, south, east, west): kills the wumpus if it is in that adjacent room
-go (north, south, east, west): moves in that direction
+shoot [north, south, east, west]: kills the wumpus if it is in that adjacent room
+go [north, south, east, west]: moves in that direction
 quit: exits the program immediately
 
-You can also use shorthand for directions: n, s, e, w.
+You can also use shorthand for directions: n, s, e, w. For that matter, you can even omit 'go' when moving, and simply state the direction or its abbreviation.
 
 
 Gameplay -
