@@ -89,6 +89,11 @@ namespace WumpusParser
 			return true;
 		}
 
+        public override int GetHashCode()
+        {
+			return this.X + this.Y * 100;
+        }
 
-	}
+
+    }
 }

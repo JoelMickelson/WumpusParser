@@ -56,8 +56,9 @@ namespace WumpusParser
 		public void Run()
 		{
 
-			DoQuickTest();
+	//		DoQuickTest();
 
+			// get the various settings for the dungeon and gameplay
 			DoGameIntro();
 
 
@@ -131,8 +132,8 @@ namespace WumpusParser
 				}
 				else if (state == GameState.AIWithBreak)
 				{
-					Console.WriteLine("\npress any key to continue");
-					Console.Write("\n> ");
+					Console.WriteLine("\npress any key to continue...");
+				//	Console.Write("\n> ");
 					Console.ReadKey(true);
 
 					DoAICommand();
@@ -225,8 +226,14 @@ namespace WumpusParser
 
 		private void DoAICommand()
 		{
-			string command = "east";
+			// really simple hack command to get the infrastructure working
+			string command = "south";
 
+			// TODO: put actual AI code here
+
+
+
+			//
 			
 			Console.WriteLine(command);
 

@@ -36,6 +36,12 @@ namespace WumpusParser
 			}
 		}
 
+		/// <summary>
+		/// turns it into a wumpus dungeon, featuring the titular wumpus and some pits
+		/// will not place either next to the stairs
+		/// the wumpus is further restricted and will not be kitty corner from the stairs
+		/// </summary>
+		/// <param name="nPits"></param>
 		public void Wumpusize(int nPits = 3)
 		{
 			GetRoom(0, 0).HasStairs = true;
