@@ -12,7 +12,6 @@ namespace WumpusParser
 	{
 
 
-
 		internal static string ConvertToDirection(string p)
 		{
 			p = p.ToLower();

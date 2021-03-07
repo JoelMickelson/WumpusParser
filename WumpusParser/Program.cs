@@ -21,10 +21,19 @@ namespace WumpusParser
 			// create dungeon
 
 			// create and place PC
+			while (true)
+			{
+				game.Startup();
+				game.Run();
 
-			game.Startup();
-			game.Run();
+				game = new Game();
 
+				Console.WriteLine("\n\n");
+				Console.WriteLine("Restarting game. Press control-C to exit.");
+				Console.WriteLine("\n\n");
+				
+
+			}
 
 
 		//	GenerateDungeon();
@@ -50,8 +59,6 @@ namespace WumpusParser
 		{
 		//	throw new NotImplementedException();
 		}
-
-
 
 
 

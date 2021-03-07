@@ -189,28 +189,7 @@ namespace WumpusParser
 
 		}
 
-		private void DoQuickTest()
-		{
-
-			int d = 10 - 4 + 1;
-
-			Console.WriteLine("" + d);
-			/*
-			for (int i=0; i<21; i++)
-			{
-				int n = (i - 8) / 3 + 2;
-				
-				n = Math.Min(n, 6);
-				n = Math.Max(n, 2);
-
-
-				Console.WriteLine("" + i + ": " + n);
-
-			}*/
-
-			Console.ReadKey();
-		}
-
+	
 		private void DoPlayerCommand()
 		{
 			string command = Console.ReadLine();
@@ -314,50 +293,53 @@ namespace WumpusParser
 			Player.Place(MainDungeon, 0, 0);
 			MainDungeon.GetRoom(0, 0).ExploredByPlayer = true;
 
+			state = GameState.Human;
+
+
+			// game style selection, in which either the human player is in charge or an AI system
+
+
+            //Announce("How would you like the game to be played?");
+            //Announce("1: by human");
+            //Announce("2: by AI with breaks in between");
+            //Announce("3: by AI as fast as possible");
+
+            //int gameStyle = 1;
+            //if (int.TryParse(Console.ReadLine(), out gameStyle))
+            //{
+            //    if (gameStyle < 1 || gameStyle > 3)
+            //    {
+            //        gameStyle = 1;
+            //    }
+            //}
+            //else
+            //    gameStyle = 1;
+
+            //switch (gameStyle)
+            //{
+            //    case 1:
+            //        state = GameState.Human;
+            //        break;
+            //    case 2:
+            //        state = GameState.AIWithBreak;
+            //        break;
+            //    case 3:
+            //    default:
+            //        state = GameState.AIFull;
+            //        break;
+            //}
+
+            return;
+        }
 
 
 
-			Announce("How would you like the game to be played?");
-			Announce("1: by human");
-			Announce("2: by AI with breaks in between");
-			Announce("3: by AI as fast as possible");
-
-			int gameStyle = 1;
-			if (int.TryParse(Console.ReadLine(), out gameStyle))
-			{
-				if (gameStyle < 1 || gameStyle > 3)
-				{
-					gameStyle = 1;
-				}
-			}
-			else
-				gameStyle = 1;
-
-			switch(gameStyle)
-			{
-				case 1:
-					state = GameState.Human;
-					break;
-				case 2:
-					state = GameState.AIWithBreak;
-					break;
-				case 3:
-				default:
-					state = GameState.AIFull;
-					break;
-			}
-
-			return;
-		}
-
-	
-
-		/// <summary>
-		/// this is just a really quick minimalist parser for something that has a really low, uncomplicated action set
-		/// </summary>
-		/// <param name="command"></param>
-		/// <returns></returns>
-		private Actuation WInterpretCommand(string command)
+        /// <summary>
+        /// this is just a really quick minimalist parser for something that has a really low, uncomplicated action set
+        /// </summary>
+        /// <param name="command"></param>
+        /// <returns></returns>
+        private Actuation WInterpretCommand(string command)
 		{
 			// climb
 			// take [gold]

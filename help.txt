@@ -36,5 +36,5 @@ Design:
 
 Hunt the Wumpus is a classic computer game, with many variants. It is now commonly used for AI education, as it is a pretty easy partially-observable domain to implement. Of course, there's nothing wrong with playing the game itself. In this case, it is sort of a Zork-like text adventure. Note, however, that the command set is so small that I didn't bother with a real parser (the 'parser' in the title just indicates that it's a text adventure). Other expectations of the genre, such as an inventory or complicated geography, are also missing.
 
-
+Also notably absent in this release is the AI itself.
 
